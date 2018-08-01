@@ -9,3 +9,20 @@ nav{
 nav > div >  img#logo{
     width: 25%;
 }
+
+main#principal-page > div > input {
+    border-bottom: 1px solid rgba(109, 13, 13, 0.767);
+    height: 2.5 rem;
+    margin-left: 2rem;
+    text-align: center;
+}
+
+main#principal-page > div > button.btn {
+    width: 25%;
+}
+
+main#principal-page > div > button.btn > img {
+    margin-top: 0.5rem;
+    width: 25%;
+}
+
