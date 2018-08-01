@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!--Barra de Navegación-->
+    <nav class="container-fluid row">
+        <div class="nav-wrapper orange lighten-2 col s12">
+            <img id="logo" class="brand-logo center" src="assets/images/Pokemon_Logo.png" alt="logo">
+        </div>
+    </nav>
+
+    <!--Barra búscadora-->
+    <main id="principal-page">
+        <div id="box-search">
+            <input id="search-pokemon" type="text">
+            <button class="btn waves-effect waves-light" type="submit" name="action">search
+                <img class="pokeball right" src="assets/images/pokebola.png" alt="pokeball">
+            </button>
+        </div>
+    </main>
+
+    <!--Contenido principal-->
+    <section>
+        <div id="box-left" class="box-img">
+            <img src="assets/images/Ash_pokemon.png" alt="ash">
+        </div>
+        <div id="box-center" class="box-img"></div>
+        <div id="box-right" class="box-img">
+            <img src="assets/images/misty_pokemon.png" alt="misty">
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+</body>
+</html>
