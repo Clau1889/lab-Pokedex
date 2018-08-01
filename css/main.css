@@ -2,6 +2,7 @@ body{
     box-sizing: border-box;
 }
 
+/*----------MOBILE FIRST------------*/
 nav{
     width: 100%;
 }
@@ -25,4 +26,14 @@ main#principal-page > div > button.btn > img {
     margin-top: 0.5rem;
     width: 25%;
 }
+
+section.main-box > div.box-img > img {
+    height: 15rem;
+    width: 50%;
+}
+
+section.main-box > div.box-img > img.rigth {
+    float: right;
+}
+
 
