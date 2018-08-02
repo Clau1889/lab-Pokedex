@@ -2,7 +2,7 @@ body{
     box-sizing: border-box;
 }
 
-section#bg{
+section#pokeSearch-page{
     background-image: url(../assets/images/battle-field.jpg);
     background-repeat: no-repeat;
     background-position: center;

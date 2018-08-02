@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <section id="bg">
+    <section data-role="page" id="pokeSearch-page">
         <!--Barra de Navegación-->
         <nav class="container-fluid row">
             <div class="nav-wrapper orange lighten-2 col s12">
@@ -36,20 +36,24 @@
         </section>
 
         <!--Barra búscadora-->
-        <main id="principal-page" class="row">
-            <div id="box-search" class="col s12">
-                <input id="search-pokemon" class="col s6 offset-s1 white-text" type="text">
-                <button class="col s2 offset-s1 btn waves-effect waves-light red darken-4" type="submit" name="action">Search
+        <main id="principal-page" class="row site-container">
+            <div action="" id="box-search" class="col s12">
+                <input id="poke-input" class="col s6 offset-s1 white-text" type="text" name="poke-input" placeholder="Name/Number" value="">
+                <button id="submit-btn" class="col s2 offset-s1 btn waves-effect waves-light red darken-4 ui-btn"  type="submit"  value="submit">Search
                     <img class="pokeball right" src="assets/images/pokebola.png" alt="pokeball">
                 </button>
             </div>
         </main>
 
-        <section>
-            <div id="center-box" class="box-information"></div>
-        </section>
+
+        <div class="site-container" id="container">
+            <ul id="response-container"></ul>
+        </div>
+
     </section>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
