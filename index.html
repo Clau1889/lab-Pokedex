@@ -1,43 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pokédex</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Autour+One" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-    <!--Barra de Navegación-->
-    <nav class="container-fluid row">
-        <div class="nav-wrapper orange lighten-2 col s12">
-            <img id="logo" class="brand-logo center" src="assets/images/Pokemon_Logo.png" alt="logo">
-        </div>
-    </nav>
+    <section id="bg">
+        <!--Barra de Navegación-->
+        <nav class="container-fluid row">
+            <div class="nav-wrapper orange lighten-2 col s12">
+                <img id="logo" class="brand-logo center" src="assets/images/Pokemon_Logo.png" alt="logo">
+            </div>
+        </nav>
 
-    <!--Barra búscadora-->
-    <main id="principal-page" class="row">
-        <div id="box-search" class="col s12">
-            <input id="search-pokemon" class="col s6 offset-s1" type="text">
-            <button class="col s2 offset-s1 btn waves-effect waves-light red darken-4" type="submit" name="action">Search
-                <img class="pokeball right" src="assets/images/pokebola.png" alt="pokeball">
-            </button>
+        <div class="row">
+            <div class="col s12 ">
+                <p id="phrase-main" class="center black-text">HI!, We are Ash and Misty. Look for your Pokémon and see its information.</p>
+            </div>
         </div>
-    </main>
+        <!--Contenido principal-->
+        <section class="main-box row">
+            <div id="left-box" class="box-img col s6">
+                <img class="rigth" src="assets/images/Ash_pokemon.png" alt="ash">
+            </div>
+            <div id="right-box" class="box-img col s6">
+                <img class="left " src="assets/images/misty_pokemon.png" alt="misty">
+            </div>
+        </section>
 
-    <!--Contenido principal-->
-    <section class="main-box row">
-        <div id="left-box" class="box-img col s6">
-            <img class="rigth" src="assets/images/Ash_pokemon.png" alt="ash">
-        </div>
-        <div id="right-box" class="box-img col s6">
-            <img class="left " src="assets/images/misty_pokemon.png" alt="misty">
-        </div>
-    </section>
-    <section>
-        <div id="center-box" class="box-information"></div>
+        <!--Barra búscadora-->
+        <main id="principal-page" class="row">
+            <div id="box-search" class="col s12">
+                <input id="search-pokemon" class="col s6 offset-s1 white-text" type="text">
+                <button class="col s2 offset-s1 btn waves-effect waves-light red darken-4" type="submit" name="action">Search
+                    <img class="pokeball right" src="assets/images/pokebola.png" alt="pokeball">
+                </button>
+            </div>
+        </main>
+
+        <section>
+            <div id="center-box" class="box-information"></div>
+        </section>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 </body>
+
 </html>
