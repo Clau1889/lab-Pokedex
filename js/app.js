@@ -11,25 +11,30 @@ searchPokemon.click( function (e){
     namePokemon = getPokemon.val();
     console.log(namePokemon);
 
-    realPokemon();
+    searchPokemonData();
 })
 
-const realPokemon= function (pokemon) {
+/*Funcion para ingresar a los pokemones */
+function searchPokemonData (pokemon) {
     $.ajax({
-        url: 'https://pokeapi.co/api/v2/pokemon/',
+        url: 'https://pokeapi.co/api/v2/pokemon/' + `${namePokemon}`,
         type:'GET',
         datatype:'json',
-        data:{
-        name: `${namePokemon}`,   
-        }
     })
     .done(function(response){
+        const getData = (response);
         console.log(response);
-
+        dataPokemon();
     })
     .fail(function(){
         console.log("error");
     })
 };
+
+    function dataPokemon (data){
+    console.log('entro-function');
+}
+
+
 
 
