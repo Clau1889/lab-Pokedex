@@ -2,13 +2,18 @@ body{
     box-sizing: border-box;
 }
 
-section#pokeSearch-page{
+.background{
     background-image: url(../assets/images/battle-field.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 100vh;
+    position: fixed;
     width: 100vw;
+}
+
+section#pokeSearch-page{
+  position: relative;
 }
 
 /*----------MOBILE FIRST------------*/
@@ -17,7 +22,7 @@ nav{
 }
 
 nav > div >  img#logo{
-    padding: 0.2rem;
+    padding: 0.3rem;
     width: 35%;
 }
 
