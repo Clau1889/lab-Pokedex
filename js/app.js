@@ -15,7 +15,7 @@ $(document).ready(function () {
     })
 
     /*Funcion para ingresar a los pokemones */
-    function searchPokemonData(pokemon) {
+    function searchPokemonData() {
         $.ajax({
             url: 'https://pokeapi.co/api/v2/pokemon/' + `${namePokemon}`,
             type: 'GET',
