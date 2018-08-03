@@ -21,19 +21,40 @@ function searchPokemonData (pokemon) {
         type:'GET',
         datatype:'json',
     })
+    /*Función que regresa  */
     .done(function(response){
         const getData = (response);
         console.log(response);
-        dataPokemon();
+        dataPokemon(getData);
     })
     .fail(function(){
         console.log("error");
     })
 };
 
-    function dataPokemon (data){
-    console.log('entro-function');
-}
+/*Función para meterme al Objeto de cada Pokémon y buscar propiedad */
+function dataPokemon (dataPokemon){
+
+    let img= dataPokemon.sprites.front_default;
+    let name= dataPokemon.name;
+    let weight= dataPokemon.weight;
+    let abilitiesPok= dataPokemon.abilities;
+
+    /*Ingresar a las habilidades de cada Pokémon */
+    for (var i=0; i<abilitiesPok.length; i++){
+        let showAbilities= [];
+        let totalAbilities= abilitiesPok[i].ability.name; 
+
+        showAbilities += totalAbilities;
+        console.log(showAbilities);
+    }
+
+
+    let infoBox= $("#container-data-pokemon");
+    let imgPokemon= document.createElement("img");
+    imgPokemon.append(img);
+    infoBox.append(imgPokemon);
+};
 
 
 
