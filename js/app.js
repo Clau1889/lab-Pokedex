@@ -26,19 +26,17 @@ $(document).ready(function () {
             getPokemons(getDataAllPokemons);
           })
           .fail(function () {
-            console.log("error");
+            console.log("Error");
           })
       }
 
     function getPokemons(dataAllPokemons){
-        console.log(dataAllPokemons);
         let arrayPokemons= [];
         let searchAllPokemons= dataAllPokemons.results;
 
         for (var j=0; j<searchAllPokemons.length; j++){
             let allPokemons= searchAllPokemons[j];
             let namePokemons= allPokemons.name;
-            console.log(namePokemons);
 
             searchPokemonData(namePokemons);
             
@@ -60,7 +58,7 @@ $(document).ready(function () {
                 dataPokemon(getData);
             })
             .fail(function () {
-                console.log("error");
+                console.log("Nombre de Pokémon incorrecto");
             })
     };
 
