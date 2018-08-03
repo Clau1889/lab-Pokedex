@@ -26,8 +26,8 @@ nav > div >  img#logo{
 }
 
 section.main-box > div.box-img > img {
-    height: 12rem;
-    width: 70%;
+    height: 8rem;
+    width: 65%;
 }
 
 section.main-box > div.box-img > img.rigth {
@@ -52,5 +52,19 @@ main#principal-page > div > button.btn > img {
     width: 35%;
     text-align: center;
 }
+
+ul#pokemon-real > img{
+    margin-left: 35%;
+}
+
+ul#pokemon-real > li {
+    color: white;
+    font-family: bold;
+    text-align: center;
+}
+    
+
+
+
 
 

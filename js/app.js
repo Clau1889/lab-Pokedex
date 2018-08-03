@@ -53,13 +53,13 @@ $(document).ready(function () {
         imgPokemon.src = img;
         pokemon.append(imgPokemon);
         infoBox.append(pokemon);
-        let textName = document.createElement('p');
+        let textName = document.createElement('li');
         textName.innerText = 'Name: ' + name;
         pokemon.append(textName);
-        let textWeight = document.createElement('p');
+        let textWeight = document.createElement('li');
         textWeight.innerText = 'Weight: ' + weight;
         pokemon.append(textWeight);
-        let textAbilities = document.createElement('p');
+        let textAbilities = document.createElement('li');
         textAbilities.innerText = 'Abilities: ' + showAbilities;
         pokemon.append(textAbilities);
 
