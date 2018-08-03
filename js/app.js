@@ -4,18 +4,50 @@ const putPokemon = $("#pokemon-real");
 let namePokemon;
 
 $(document).ready(function () {
+    pokemons();
     /*Función que extrae el valor de ingreso del Input*/
     searchPokemon.click(function (e) {
         e.preventDefault();
         $("#pokemon-real").empty();
         namePokemon = getPokemon.val();
-        console.log(namePokemon);
 
-        searchPokemonData();
+        searchPokemonData(namePokemon);
     })
 
-    /*Funcion para ingresar a los pokemones */
-    function searchPokemonData() {
+    /*---FUNCION AJAX PARA TODOS LOS POKEMONES---*/
+    function pokemons() {
+        $.ajax({
+          url: 'https://pokeapi.co/api/v2/pokemon/',
+          type: 'GET',
+          datatype: 'json',
+        })
+          .done(function (response) {
+            const getDataAllPokemons = (response);
+            getPokemons(getDataAllPokemons);
+          })
+          .fail(function () {
+            console.log("error");
+          })
+      }
+
+    function getPokemons(dataAllPokemons){
+        console.log(dataAllPokemons);
+        let arrayPokemons= [];
+        let searchAllPokemons= dataAllPokemons.results;
+
+        for (var j=0; j<searchAllPokemons.length; j++){
+            let allPokemons= searchAllPokemons[j];
+            let namePokemons= allPokemons.name;
+            console.log(namePokemons);
+
+            searchPokemonData(namePokemons);
+            
+        }
+    }
+
+
+    /*Funcion para ingresar para cada Pokémon */
+    function searchPokemonData(namePokemon) {
         $.ajax({
             url: 'https://pokeapi.co/api/v2/pokemon/' + `${namePokemon}`,
             type: 'GET',
@@ -24,7 +56,7 @@ $(document).ready(function () {
             /*Función que regresa  */
             .done(function (response) {
                 const getData = (response);
-                console.log(response);
+                //console.log(response);
                 dataPokemon(getData);
             })
             .fail(function () {
