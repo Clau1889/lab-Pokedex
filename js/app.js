@@ -17,29 +17,29 @@ $(document).ready(function () {
     /*---FUNCION AJAX PARA TODOS LOS POKEMONES---*/
     function pokemons() {
         $.ajax({
-          url: 'https://pokeapi.co/api/v2/pokemon/',
-          type: 'GET',
-          datatype: 'json',
+            url: 'https://pokeapi.co/api/v2/pokemon/',
+            type: 'GET',
+            datatype: 'json',
         })
-          .done(function (response) {
-            const getDataAllPokemons = (response);
-            getPokemons(getDataAllPokemons);
-          })
-          .fail(function () {
-            console.log("Error");
-          })
-      }
+            .done(function (response) {
+                const getDataAllPokemons = (response);
+                getPokemons(getDataAllPokemons);
+            })
+            .fail(function () {
+                console.log("Error");
+            })
+    }
 
-    function getPokemons(dataAllPokemons){
-        let arrayPokemons= [];
-        let searchAllPokemons= dataAllPokemons.results;
+    function getPokemons(dataAllPokemons) {
+        let arrayPokemons = [];
+        let searchAllPokemons = dataAllPokemons.results;
 
-        for (var j=0; j<searchAllPokemons.length; j++){
-            let allPokemons= searchAllPokemons[j];
-            let namePokemons= allPokemons.name;
+        for (var j = 0; j < searchAllPokemons.length; j++) {
+            let allPokemons = searchAllPokemons[j];
+            let namePokemons = allPokemons.name;
 
             searchPokemonData(namePokemons);
-            
+
         }
     }
 
