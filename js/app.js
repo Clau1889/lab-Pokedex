@@ -7,6 +7,7 @@ $(document).ready(function () {
     /*Función que extrae el valor de ingreso del Input*/
     searchPokemon.click(function (e) {
         e.preventDefault();
+        $("#pokemon-real").empty();
         namePokemon = getPokemon.val();
         console.log(namePokemon);
 
