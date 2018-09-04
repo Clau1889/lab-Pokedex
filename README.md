@@ -2,6 +2,7 @@
 * **ELABORADO POR** _Claudia Trujillo Blanco
 * **Curso:** _Jugando con jQuery Ajax
 * **Unidad:** _¿Qué significa traer datos de un servidor asíncronamente?
+* **Desarrollado para**: Laboratoria [http://laboratoria.la]
 
 # Pókedex
 
