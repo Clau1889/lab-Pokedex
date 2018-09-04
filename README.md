@@ -5,6 +5,8 @@
 
 # Pókedex
 
+![image](https://user-images.githubusercontent.com/37419350/45052654-3603f700-b04d-11e8-9c1b-86d73fd73da2.png)
+
 ##  ¿Qué es Pókedex?
 
 Pókedex es una app móvil dónde puedes buscar y obtener información sobre el pokemon que buscas. A tráves de la PókeApi.
